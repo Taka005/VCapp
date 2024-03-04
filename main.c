@@ -32,13 +32,13 @@ int main(void){
   words[0] = "何もない";
   words[1] = "こっちへ行こう";
   words[2] = "あっちに敵がいる";
-  words[3] = "";
-  words[4] = "";
-  words[5] = "";
-  words[6] = "";
-  words[7] = "";
-  words[8] = "";
-  words[9] = "";
+  words[3] = "あっちに敵がいるかも";
+  words[4] = "ここを守る";
+  words[5] = "ここを見張る";
+  words[6] = "ここを漁る";
+  words[7] = "武器がないんだけど";
+  words[8] = "これ聞こえてる？";
+  words[9] = "テストテスト";
 
   while(1){
     for(int i = 0;i < 10;i++){
