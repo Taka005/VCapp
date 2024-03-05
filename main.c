@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <locale.h>
 #include <windows.h>
 
 int numToKey(int keyNum){
@@ -28,7 +27,6 @@ void speak(char* word){
 }
 
 int main(void){
-  setlocale(LC_ALL, "");
   char* words[10];
 
   words[0] = "何もない";
