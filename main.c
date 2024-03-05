@@ -1,19 +1,20 @@
 #include <stdio.h>
 #include <string.h>
+#include <locale.h>
 #include <windows.h>
 
 int numToKey(int keyNum){
   int keys[10] = {
-    VK_0,
-    VK_1,
-    VK_2,
-    VK_3,
-    VK_4,
-    VK_5,
-    VK_6,
-    VK_7,
-    VK_8,
-    VK_9
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
   };
 
   return keys[keyNum];
@@ -22,11 +23,12 @@ int numToKey(int keyNum){
 void speak(char* word){
   char command[500] = "start ./Softalk.exe /W:";
   strcat(command,word);
-
+  printf("読み上げました\n");
   system(command);
 }
 
 int main(void){
+  setlocale(LC_ALL, "");
   char* words[10];
 
   words[0] = "何もない";
@@ -45,6 +47,7 @@ int main(void){
       if((GetAsyncKeyState(VK_SHIFT) < 0)&&(GetAsyncKeyState(numToKey(i)) < 0)){
         speak(words[i]);
       }
+      Sleep(10);
     }
   }
 
