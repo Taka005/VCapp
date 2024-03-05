@@ -42,7 +42,7 @@ int main(void){
 
   while(1){
     for(int i = 0;i < 10;i++){
-      if((GetAsyncKeyState(VK_SHIFT) < 0)&&(GetAsyncKeyState(numToKey(i)) < 0)){
+      if((GetAsyncKeyState(VK_CONTROL) < 0)&&(GetAsyncKeyState(numToKey(i)) < 0)){
         speak(words[i]);
       }
       Sleep(10);
